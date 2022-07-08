@@ -11,11 +11,14 @@ public class Gui {
             String Username;
             String Username2;
             String Password;
+            String Password2;
 
 
             Password = "123";
             Username = "admin";
             Username2 = "user";
+            Password2 = "1";
+
 
 
 
@@ -28,23 +31,53 @@ public class Gui {
             String password = input2.next();
 
 
-            if (username.equals(Username) && password.equals(Password)) {
+            if (username.equals(Username2) && password.equals(Password2)) {
 
-                String[] choices = { "taxi", "hotel", "air ticket", "train", "food" };
-                String input = (String) JOptionPane.showInputDialog(null, "Receipts",
-                        "Reimbursement claim", JOptionPane.QUESTION_MESSAGE, null, // Use
+                String[] choices1 = { "new reimbursement claim", "personal car mileage"," Daily allowance ","Total amount of the reimbursement" };
+                String input  = (String) JOptionPane.showInputDialog(null, "Action",
+                        "Business trip", JOptionPane.QUESTION_MESSAGE, null, // Use
                         // default
                         // icon
-                        choices, // Array of choices
-                        choices[1]); // Initial choice
-                System.out.println(input);
+                        choices1, // Array of choices
+                        choices1[1]); // Initial choice
+
+                if (input =="new reimbursement claim")
+                {
+                    String[] choices = { "taxi", "hotel", "air ticket", "train", "food" };
+                    String input3 = (String) JOptionPane.showInputDialog(null, "Receipts",
+                            "Reimbursement claim", JOptionPane.QUESTION_MESSAGE, null, // Use
+                            // default
+                            // icon
+                            choices, // Array of choices
+                            choices[1]); // Initial choice
+                }
+                if (input =="Daily allowance")
+                {
+
+                }
+
+            }
+            if (username.equals(Username)
+                    && password.equals(Password)) {
+                    // admin
+                String[] adminchoice = { "Change rates for daily allowance", "Change rates for daily mileage"," edit the list of available receipts  ","define reimbursement limits " };
+                String input  = (String) JOptionPane.showInputDialog(null, "Action",
+                        "Admin console", JOptionPane.QUESTION_MESSAGE, null, // Use
+                        // default
+                        // icon
+                        adminchoice, // Array of choices
+                        adminchoice[1]); // Initial choice
+
             }
 
-            else if (username.equals(Username)) {
+            /*else if (username.equals(Username)) {
                 System.out.println("Invalid Password!");
             } else if (password.equals(Password)) {
                 System.out.println("Invalid Username!");
-            } else {
+            }
+            */
+            else {
+
                 System.out.println("Invalid Username & Password!");
             }
 
