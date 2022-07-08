@@ -53,6 +53,8 @@ public class Gui {
                 }
                 if (input =="Daily allowance")
                 {
+                    Scanner days = new Scanner(System.in);
+                    System.out.println("Enter days : ");
 
                 }
 
